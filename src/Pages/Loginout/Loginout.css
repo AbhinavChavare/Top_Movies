@@ -1,0 +1,48 @@
+.log-center{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logCont{
+    width:95%;
+    /* background-color: rgb(196, 196, 245); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-input{
+    width: 55vw;
+    max-width: 40rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid grey;
+}
+input::-webkit-input-placeholder{
+    color:grey;
+}
+.gotologreg{
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    color: blue;
+    font-weight: 500;
+}
+/*Logout page */
+.logout-cont{
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+@media (max-width:500px){
+    .log-input{
+        width: 80vw;
+        max-width: 40rem;
+    }
+}

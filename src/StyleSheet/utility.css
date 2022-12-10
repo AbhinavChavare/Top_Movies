@@ -1,0 +1,96 @@
+/* Utility classes */
+
+/* Classes for flex */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.justify-content-space-btw{
+    justify-content: space-between;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+/* Classes for positioning */
+  
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.center-x {
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+.center-y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Classes for border-radius */
+.border-rounded-xxs {
+    border-radius: var(--scale-xxs);
+}
+
+.border-rounded-xs {
+    border-radius: var(--scale-xs);
+}
+.border-rounded-sm {
+    border-radius: var(--scale-sm);
+}
+.border-rounded-md {
+    border-radius: var(--scale-md);
+}
+.border-rounded-lg {
+    border-radius: var(--scale-lg);
+}
+.border-rounded-full {
+    border-radius: 50%;
+}
+
+
+/* Other utlities */
+.cursor-pointer{
+    cursor: pointer;
+}
+.font-inherit{
+    font-size: inherit;
+}
+.font-weight-bold{
+    font-weight: bold;
+}
+.font-weight-800{
+    font-weight: 800;
+}
+.font-weight-700{
+    font-weight: 700;
+}

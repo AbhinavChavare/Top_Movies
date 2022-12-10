@@ -1,0 +1,75 @@
+:root{
+    --scale-xxs: 0.3rem;
+
+    --scale-xs: 0.5rem;
+
+    --scale-sm: 1rem;
+  
+    --scale-md: 1.5rem;
+  
+    --scale-lg: 2rem;
+  
+    --scale-xl: 3rem;
+
+    --scale-xxl: 4rem;
+
+    --scale-xxxl: 5rem;
+  
+    /* Margin Style Variables */
+
+    --margin-xs: 0.5rem;
+
+    --margin-sm: 1rem;
+  
+    --margin-md: 1.5rem;
+  
+    --margin-lg: 2rem;
+  
+    --margin-xl: 3rem;
+
+    --margin-xxl: 4rem;
+
+    /* Padding Style Variables */
+  
+    --padding-xs: 0.5rem;
+
+    --padding-sm: 1rem;
+  
+    --padding-md: 1.5rem;
+  
+    --padding-lg: 2rem;
+  
+    --padding-xl: 3rem;
+
+    --padding-xxl: 4rem;
+
+    /* Gap Style Variables */
+
+    --gap-xs: 0.5rem;
+
+    --gap-sm: 1rem;
+  
+    --gap-md: 1.5rem;
+  
+    --gap-lg: 2rem;
+  
+    --gap-xl: 3rem;
+
+    --gap-xxl: 4rem; 
+
+    /* Z-index variables */
+
+    --z-index-sm: 1;
+  
+    --z-index-md: 2;
+  
+    --z-index-lg: 3;
+  
+    --z-index-xl: 4;
+
+    --z-index-xxl: 5; 
+
+    /* font size */
+     --default-font-size: 1.6rem;
+
+}

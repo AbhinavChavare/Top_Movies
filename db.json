@@ -1,0 +1,17 @@
+{
+  "userLogin": [
+    {
+      "id": 1,
+      "name": "abc",
+      "password": "9921899345"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
