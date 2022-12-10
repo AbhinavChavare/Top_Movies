@@ -40,8 +40,12 @@ const logoutUser=()=>{
     <div className={`navLinks-cont ${toggleNav?"action":null}`}>
     <NavLink to="/">
     <li onClick={()=>setToggleNav(true)} >Home</li></NavLink>
-    <NavLink to="/about">
-    <li onClick={()=>setToggleNav(true)} >About</li></NavLink>
+    <NavLink to="/movie/popular">
+    <li onClick={()=>setToggleNav(true)} >Popular</li></NavLink>
+    <NavLink to="/movie/top_rated">
+    <li onClick={()=>setToggleNav(true)} >Top Rated</li></NavLink>
+    <NavLink to="/movie/upcoming">
+    <li onClick={()=>setToggleNav(true)} >Upcoming</li></NavLink>
     {
 
     (userlogin!=="loggedIn")?
