@@ -35,7 +35,7 @@
     height: 28rem;
     position: absolute;
     bottom: 0;
-        opacity: 0.1;
+        opacity: 0;
         /* background-color: aqua; */
         color: white;
         text-shadow: .3rem .2rem .1rem rgb(0, 0, 0);

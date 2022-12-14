@@ -13,8 +13,8 @@ position: relative;
  }
  .detail-text{
 width: 50vw;
-     color: white;
-     text-shadow: .1rem .1rem .4rem rgb(5, 5, 5);
+     color:var(--text-clr);
+     text-shadow: .1rem .1rem .4rem var(--all-bg-clr);
      text-align: start;
      margin-top: 10rem; 
      box-sizing: border-box;
@@ -58,16 +58,17 @@ width: 50vw;
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
+    flex-wrap: wrap;
 }
 .home-uselinks{
-color: aliceblue;
+color: var(--text-clr);
 }
   .homepage-link{
     background-color: rgb(122, 122, 238);
     padding: .5rem 1rem;
     display: flex;
     align-items: center;
-    color: azure;
+    color: var(--text-clr);
     
   }
   .hm-icons{

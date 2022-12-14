@@ -9,7 +9,7 @@ const Logout = () => {
       <h4>Thanks for Visiting</h4>
       <h4>Please click to login </h4>
       <NavLink to="/login">
-   <button>Login</button> </NavLink>
+   <button className='btn-border'>Click to Login</button> </NavLink>
       
     </div>
   )

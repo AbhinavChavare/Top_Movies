@@ -6,7 +6,7 @@ import "./HeaderNav.css"
 const Headerlogo = () => {
   return (
     <div className='headercont'>
-    <h1><strong>A.B.C</strong></h1>
+    <h1><strong>Top_Movies</strong></h1>
 <NavbarLinks/>
     </div>
   )

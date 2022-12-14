@@ -1,38 +1,35 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaBars,FaTimes } from "react-icons/fa";
+import { BsMoonFill,BsSun } from "react-icons/bs";
 import { useAuthContext } from '../Context/AuthContext';
+import { toast } from 'react-toastify';
+
 const NavbarLinks = () => {
 
- const {userlogin,setUserLogin}=useAuthContext()
+ const {userlogin,setUserLogin,theme,setTheme,storeInputData,setlogout}=useAuthContext()
 
-  // const [theme, setTheme] = useState("light-theme")
-  // const toggleTheme = () => {
-  //   settogbtnicon(true);
-  //   // alert(togbtnicon)
-  //   if (theme === "light-theme") {
-  //     setTheme("dark-theme")
-  //   } else {
-  //     setTheme("light-theme")
-  //     // alert(theme)
-  //     // document.body.className = theme;
-  //   }
-  // }
-  // useEffect((e) => {
-  //   document.body.className = theme;
-  // }, [theme])
-
-
+ const showLogout = () => {
+  toast('Logout successfully!', {
+    position: "top-center",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
+   };
+ 
 const [toggleNav,setToggleNav]=useState(true)
 const logoutUser=()=>{
-  alert("sdf")
   localStorage.clear("Token")
   setToggleNav(true)
   setUserLogin(" ")
+  showLogout()
+  setlogout()
 }
-
-
-
 
   return (
     <div>
@@ -46,16 +43,25 @@ const logoutUser=()=>{
     <li onClick={()=>setToggleNav(true)} >Top Rated</li></NavLink>
     <NavLink to="/movie/upcoming">
     <li onClick={()=>setToggleNav(true)} >Upcoming</li></NavLink>
+
+
     {
-
-    (userlogin!=="loggedIn")?
-
+  ( (userlogin!=="loggedIn") || (storeInputData.length==0)) ?
     <NavLink to="/login">
     <li onClick={()=>setToggleNav(true)}>Login</li></NavLink>
     :
     <NavLink to="/logout">
     <li onClick={()=>logoutUser()} >Logout</li></NavLink>
     
+    }
+{
+   theme==="light-theme" ?
+    <li className='theme-tog' onClick={()=>setTheme("dark-theme")}> 
+    <BsMoonFill />
+    </li>:
+    <li className='theme-tog'  onClick={()=>setTheme("light-theme")}> 
+    <BsSun />
+    </li>
     }
     </div >
 {
@@ -67,6 +73,7 @@ const logoutUser=()=>{
     <FaTimes className='tog-bar'/>
     </i>
     }
+
     </div>
 
   )

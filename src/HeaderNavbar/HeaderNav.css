@@ -1,6 +1,7 @@
 .headercont{
-    height:6rem;
-    background-color: rgb(142, 142, 236);
+    height:7.5rem;
+    background-color: var( --head-clr);
+    color:var( --text-clr);
     display: flex;
     justify-content: space-between;
     padding: 2rem;
@@ -17,32 +18,40 @@
 .tog-bar{
     position: absolute;
     right: 3rem;
-    font-size: 2.3rem;
-    top: 1.7rem ; 
+    font-size: 2.5rem;
+    top: 2.6rem ; 
     display: none;
     font-weight: 400;
+}
+.theme-tog{
+    display: flex;
+    align-items: center;
 }
 
 
 
 
 
-@media (max-width:600px){
+@media (max-width:700px){
     .navLinks-cont{
     position: absolute;
     top: 0  ;
     left: 0;
     width: 100%;
-    background-color: rgb(160, 174, 174);
+    background-color: var( --head-clr);
+    color: var( --text-clr);
     min-height: 30rem;
-    height: 40vh;
+    height: 80vh;
+    opacity: 0.98;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 } 
 li{
-    font-size: 2.3rem;
+    font-size: 2rem;
+    margin: 0.9rem;
+    color: var( --text-clr);
 }
 .tog-bar{
     display: block;

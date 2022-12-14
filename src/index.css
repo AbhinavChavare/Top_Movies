@@ -27,19 +27,24 @@ code {
    --btn-normal:rgb(54, 183, 248);
    --text-data:rgb(214, 140, 140);
    --border:whitesmoke;
+   --text-clr:#fff;
+   --placeholder-text:rgb(191, 188, 188);
 }
 .light-theme{
   --all-bg-clr:rgb(234, 228, 228);
-  --head-clr:rgb(44, 227, 255);
+  --head-clr:rgb(73, 226, 250);
   --para-clr:rgb(160, 243, 249);
  --btn-rem:rgb(242, 21, 21);
  --btn-text:rgb(0, 0, 0);
- --btn-normal:rgb(0, 170, 255);
+ --btn-normal:rgb(4, 156, 231);
  --text-data:rgb(0, 0, 0);
   --border:grey;
+  --text-clr:#000;
+  --placeholder-text:rgb(135, 133, 133);
+
 }
 .cloads{
-  color:whitesmoke;
+  color:rgb(104, 102, 102);
 }
 
 
@@ -52,11 +57,11 @@ code {
 
 @media(max-width:700px){
   html{
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 @media(max-width:500px){
   html{
-    font-size: 7.5px;
+    font-size: 9px;
   }
 }

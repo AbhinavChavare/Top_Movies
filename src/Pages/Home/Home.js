@@ -48,7 +48,7 @@ getPopMoviefrAPI()
         popMovieData?
  popMovieData.map((ele)=>{
  return (
-<div>
+<div key={ele.id} >
       <div className='images-cont'>
        <img  src={`https://image.tmdb.org/t/p/original${ele && ele.backdrop_path}`}></img>
       <div className='carosuel-text'>

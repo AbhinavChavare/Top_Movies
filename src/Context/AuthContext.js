@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import reducer from "../Reducer/AuthReducer"
+import { toast } from 'react-toastify';
 
 const AuthContext=createContext()
 
@@ -15,10 +16,72 @@ const initialState={
 }
 
 const AuthContextProvider=({children})=>{
-
+  let list =localStorage.getItem("Token")
 const [state,dispatch]=useReducer(reducer,initialState)
+const [theme,setTheme]=useState("light-theme")
+
 const [userlogin,setUserLogin]=useState("")
 const navigate=useNavigate()
+
+
+  if(state.storeInputData.length<1){
+    state.storeInputData=[] 
+  }
+const setlogout=()=>{
+  state.storeInputData=[] 
+}
+console.log(state.storeInputData.length)
+console.log(state.storeInputData)
+
+const showLogin = () => {
+  toast('Login successfully!', {
+    position: "top-center",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
+   };
+const showinvalidpassword = () => {
+  toast('Invalid mail id or Password!,  please register', {
+    position: "top-center",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
+   };
+const showRegistered = () => {
+  toast('Registered Sucessfully go to login!', {
+    position: "top-center",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
+   };
+const showConfirmPassword = () => {
+  toast('Check Password or Confirm Password!', {
+    position: "top-center",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
+   };
+
 
 const getInputData=(e)=>{
   let fname=e.target.name
@@ -26,7 +89,7 @@ const getInputData=(e)=>{
   return dispatch({type:"GET_REGIS_DATA",payload:{fname,value}})
 }
 
-let list =localStorage.getItem("Token")
+
 const getLocalStore=()=>{
   if (list){
 let updateLocalStorage=JSON.parse(list)
@@ -40,36 +103,39 @@ dispatch({type:"GET_PRE_DATA",payload:updateLocalStorage})
 const setStoreData=(e)=>{
 e.preventDefault()
 if (state.loginInput.password===state.loginInput.cfmpassword){
-  alert("registered Sucessfully")
+  // alert("registered Sucessfully")
+  showRegistered()
   dispatch({type:"SET_STORE_DATA"})
   dispatch({type:"RESET_REGIS"})
 }
 else{
-  alert("invalid password")
+  showConfirmPassword()
 }
 }
 
 const checkLog=(e)=>{
   e.preventDefault()
-  if(list){
-  alert("inside")
+  if (state.storeInputData.length==0){
+    showinvalidpassword()
+  }
+  else if(list!==[]){
     let updateLocalStorage=JSON.parse(localStorage.getItem("Token"))
     if((state.loginInput.email===updateLocalStorage[0].email)&& (state.loginInput.password===updateLocalStorage[0].password)){
-      alert("login")
-      setUserLogin("loggedIn")
+      showLogin();
       navigate("/")
+      setUserLogin("loggedIn")
     }
     else{
-      alert("invalid email or password")
-      setUserLogin("")
+     showinvalidpassword()
     }
   }
   else{
     setUserLogin("")
     alert("please register to proceed")
+    showinvalidpassword()
   } 
-}
 
+}
 
 
 useEffect(()=>{
@@ -82,7 +148,7 @@ useEffect(()=>{
 
 
 return(
-    <AuthContext.Provider value={{...state,getInputData,setStoreData,checkLog,userlogin,setUserLogin}}>
+    <AuthContext.Provider value={{...state,getInputData,setStoreData,checkLog,userlogin,setUserLogin,theme,setTheme,setlogout}}>
         {children}
     </AuthContext.Provider>
 )

@@ -1,8 +1,8 @@
 .log-center{
-
     display: flex;
     align-items: center;
     justify-content: center;
+  
 }
 .logCont{
     width:95%;
@@ -16,16 +16,26 @@
     max-width: 40rem;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(  --border);
+    color: var( --text-clr);
 }
 input::-webkit-input-placeholder{
-    color:grey;
+    color:var( --placeholder-text);
+}
+button{
+ color: var( --text-clr);
+
+}
+
+.btn-border{
+border: 1px solid grey;
+margin-bottom: 1rem;
 }
 .gotologreg{
     font-size: 1.2rem;
     text-decoration: underline;
     margin-bottom: 1rem;
-    color: blue;
+    color: var(--btn-normal );
     font-weight: 500;
 }
 /*Logout page */
@@ -34,6 +44,7 @@ input::-webkit-input-placeholder{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    color: var( --text-clr);
 }
 
 

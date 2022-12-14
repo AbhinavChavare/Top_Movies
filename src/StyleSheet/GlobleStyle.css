@@ -48,22 +48,22 @@ button{
     background-color: transparent;
 }
 button:hover{
-    background-color:rgb(187, 128, 241);
+    background-color: var( --btn-normal);
 }
 a {
     margin: .3rem;
     text-decoration: none;
-    color: black;
+    color: var(--text-clr);
 }
 
 li{
     list-style: none;
     text-decoration:none;
-    font-size: 1.7rem;
-    padding: .2rem 1rem;
+    font-size: 1.95rem;
+    padding: .2rem 0.6rem;
    text-decoration: none;
    font-weight: 460;
-   color: black;    
+   color: var(--text-clr);   
    border-radius: 3px;
 }
 li:hover{
@@ -99,7 +99,7 @@ justify-content: space-between;
 input{
     margin: 1rem .5rem;
     padding: .3rem;
-    border: 1px solid black;
+    border: 1px solid var( --text-clr);
     outline: none;
     /* flex-wrap: wrap */
 }

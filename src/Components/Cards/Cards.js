@@ -36,7 +36,7 @@ setTimeout(()=>{
                     <NavLink key={ele.id} to={`/movies/${ele.id} `}>
                             <div className='card-images-cont'>
                             <img  src={`https://image.tmdb.org/t/p/original${ele && ele.backdrop_path}`}></img>
-                            {console.log( ele.id)}
+                            {/* {console.log( ele.id)} */}
                                 <div className='card-text'>
                                 <div className="card-opacity">
                                     <h3>{ele && ele.original_title}</h3>
